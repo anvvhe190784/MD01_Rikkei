@@ -9,7 +9,8 @@ create table sales.Products (
 create table sales.Orders (
     order_id serial primary key,
     order_date date default current_date,
-    member_id integer references library.Members(member_id)
+    member_id integer,
+    foreign key (member_id) references library.Members(member_id)
 );
 create table sales.OrderDetails (
     order_detail_id serial primary key,
