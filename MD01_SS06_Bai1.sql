@@ -1,5 +1,5 @@
-insert into Product (ProductID, ProductName, Category, Price, StockQuantity)
-values
+insert into Product (id, name, category, price, stock)
+values 
     (1, 'iPhone 15 Pro', 'Điện tử', 28000000, 15),
     (2, 'Chuột không dây', 'Phụ kiện', 500000, 50),
     (3, 'Tai nghe Sony', 'Điện tử', 8500000, 10),
@@ -9,15 +9,15 @@ values
 select *
 from Product;
 
-select p.ProductName, p.Price
+select p.name, p.price
 from Product as p
-order by p.Price desc
+order by p.price desc
 limit 3;
 
-select p.ProductName, p.Category, p.Price
+select p.name, p.category, p.price
 from Product as p
-where p.Category = 'Điện tử' and p.Price < 10000000;
+where p.category = 'Điện tử' and p.price < 10000000;
 
-select p.ProductName, p.StockQuantity
+select p.name, p.stock
 from Product as p
-order by p.StockQuantity asc;
+order by p.stock asc;
