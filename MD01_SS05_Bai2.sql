@@ -8,7 +8,7 @@ having sum(o.total_price) = (
         select sum(total_price) as total_revenue
             from orders
             group by product_id
-         )
+         ) as total_revenue
 );
 
 select p.category, sum(o.total_price) as total_revenue
